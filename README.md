@@ -21,16 +21,16 @@ This code computes the phase-average of the spectrogram of a cyclic noise, even 
 3. Thanks to a loop on frequencies, compute the phase-averaging of the signal for each frequency of the spectrogram separatly, using the time-domain or the frequency-domain method:
 
 Time-domain method:
-a. Divide the signal into segments corresponding to the different cycles
-b. Interpolate the signals in each segment on the same number of sample
-c. Compute the average of all the resampled segments
+1. Divide the signal into segments corresponding to the different cycles
+2. Interpolate the signals in each segment on the same number of sample
+3. Compute the average of all the resampled segments
 
 Frequency-domain method:
-a. Divide the signal into segments corresponding to the different cycles
-b. Compute the fft of each segment
-c. Truncate the results on each segment so that all fft have the same length as the one of the shortest cycle
-d. Average all the spectra
-e. Compute the inverse fft to obtain the phase-averaged signal in the time domain.
+1. Divide the signal into segments corresponding to the different cycles
+2. Compute the fft of each segment
+3. Truncate the results on each segment so that all fft have the same length as the one of the shortest cycle
+4. Average all the spectra
+5. Compute the inverse fft to obtain the phase-averaged signal in the time domain.
 
 ## Example
 
